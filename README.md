@@ -22,7 +22,7 @@ Completed:
 Walkthrough Gif:
 [Add walkthrough.gif to the project root]
 
-![Video Walkthrough](walkthrough.gif)
+![alt tag](https://github.com/hvyas/nodejs_codepath/blob/master/Walkthrough.gif)
 
 Note: to embed the gif file, just check your gif file into your repo and update the name of the file above.
 
