@@ -9,7 +9,7 @@ Time spent: [Write the number of hours you spend here]
 Completed:
 
 * [x] Required: Requests to port `8000` are echoed back with the same HTTP headers and body
-* [] Required: Requests/reponses are proxied to/from the destination server
+* [x] Required: Requests/reponses are proxied to/from the destination server
 * [] Required: The destination server is configurable via the `--host`, `--port`  or `--url` arguments
 * [] Required: The destination server is configurable via the `x-destination-url` header
 * [] Required: Client requests and respones are printed to stdout
@@ -22,6 +22,9 @@ Completed:
 Walkthrough Gif:
 [Add walkthrough.gif to the project root]
 
+![alt tag](https://github.com/hvyas/nodejs_codepath/blob/master/Walkthrough.gif)
+
+Walkthrough2 Gif:
 ![alt tag](https://github.com/hvyas/nodejs_codepath/blob/master/Walkthrough.gif)
 
 Note: to embed the gif file, just check your gif file into your repo and update the name of the file above.
