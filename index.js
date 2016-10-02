@@ -8,8 +8,8 @@ http.createServer((req, res) => {
     //req.pipe(res)
     for (let header in req.headers) {
     res.setHeader(header, req.headers[header])
-    req.pipe(res)
 }
+req.pipe(res)
 }).listen(8000)
 
 let destinationUrl = '127.0.0.1:8000'
@@ -21,7 +21,10 @@ http.createServer((req, res) => {
   	  headers: req.headers,
   	  url: `http://${destinationUrl}${req.url}`
   	 }
-  	 request(options).pipe(res)
+  	 
+  	 let outboundResponse = request(options)
+     outboundResponse.pipe(res)
      options.method = req.method
      req.pipe(request(options)).pipe(res)
+
 }).listen(8001)
