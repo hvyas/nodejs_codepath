@@ -1,0 +1,17 @@
+{
+  "name": "proxy-server",
+  "version": "1.0.0",
+  "description": "A proxy server and an echo server.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "author": "Harit Vyas",
+  "license": "MIT",
+  "dependencies": {
+    "request": "^2.75.0",
+    "require": "^2.4.20",
+    "yargs": "^6.0.0"
+  }
+}
