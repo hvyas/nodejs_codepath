@@ -1,6 +1,24 @@
 "use strict";
 let http = require('http')
 let request = require('request')
+let url = require('url')
+
+let argv = require('yargs')
+	.default('host', '127.0.0.1:8000')
+	.argv
+
+//let localhost = '127.0.0.1'
+//let host = argv.host || localhost
+//let port = argv.port || (argv.host === '127.0.0.1' ? 8000 : 80)
+//let destinationUrl = 'http://' + host + ':' + port
+//console.log(destinationUrl)
+
+let port = argv.port || (argv.host === '127.0.0.1' ? 8000 : 80)
+let destinationUrl = argv.url || url.format({
+   protocol: 'http',
+   host: argv.host,
+   port
+})
 
 http.createServer((req, res) => {
     console.log(`Request received at: ${req.url}`)
@@ -12,14 +30,15 @@ http.createServer((req, res) => {
 req.pipe(res)
 }).listen(8000)
 
-let destinationUrl = '127.0.0.1:8000'
+//let destinationUrl = '127.0.0.1:8000'
 
 http.createServer((req, res) => {
   console.log(`Proxying request to: ${destinationUrl + req.url}`)
 
   let options = {
   	  headers: req.headers,
-  	  url: `http://${destinationUrl}${req.url}`
+  	  url: destinationUrl,
+  	  method: req.method
   	 }
   	 
   	 let outboundResponse = request(options)
