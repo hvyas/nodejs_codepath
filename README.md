@@ -11,9 +11,9 @@ Completed:
 * [x] Required: Requests to port `8000` are echoed back with the same HTTP headers and body
 * [x] Required: Requests/reponses are proxied to/from the destination server
 * [x] Required: The destination server is configurable via the `--host`, `--port`  or `--url` arguments
-* [] Required: The destination server is configurable via the `x-destination-url` header
-* [] Required: Client requests and respones are printed to stdout
-* [] Required: The `--logfile` argument outputs all logs to the file specified instead of stdout
+* [x] Required: The destination server is configurable via the `x-destination-url` header
+* [x] Required: Client requests and respones are printed to stdout
+* [x] Required: The `--logfile` argument outputs all logs to the file specified instead of stdout
 * [] Optional: The `--exec` argument proxies stdin/stdout to/from the destination program
 * [] Optional: The `--loglevel` argument sets the logging chattiness
 * [] Optional: Supports HTTPS
@@ -29,6 +29,9 @@ Walkthrough2 Gif:
 
 Walkthrough3 Gif:
 ![alt tag](https://github.com/hvyas/nodejs_codepath/blob/master/Walkthrough3.gif)
+
+Walkthrough4 Gif:
+![alt tag](https://github.com/hvyas/nodejs_codepath/blob/master/Walkthrough4.gif)
 
 Note: to embed the gif file, just check your gif file into your repo and update the name of the file above.
 
