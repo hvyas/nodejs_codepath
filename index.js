@@ -7,12 +7,6 @@ let argv = require('yargs')
 	.default('host', '127.0.0.1:8000')
 	.argv
 
-//let localhost = '127.0.0.1'
-//let host = argv.host || localhost
-//let port = argv.port || (argv.host === '127.0.0.1' ? 8000 : 80)
-//let destinationUrl = 'http://' + host + ':' + port
-//console.log(destinationUrl)
-
 let port = argv.port || (argv.host === '127.0.0.1' ? 8000 : 80)
 let destinationUrl = argv.url || url.format({
    protocol: 'http',
