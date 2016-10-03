@@ -5,13 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js"
+    "start": "nodemon index.js --port=8000"
   },
   "author": "Harit Vyas",
   "license": "MIT",
   "dependencies": {
     "request": "^2.75.0",
     "require": "^2.4.20",
-    "yargs": "^6.0.0"
+    "yargs": "^3.32.0"
   }
 }
